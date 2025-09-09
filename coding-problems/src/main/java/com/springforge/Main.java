@@ -66,5 +66,11 @@ public class Main {
 
         System.out.println(numResult);
 
+
+        //07:: Given a word, find the occurrence of each character
+        Map<String,Long> charOccurrence=Arrays.stream(duplicateStr.split(""))
+                .collect(Collectors.groupingBy(Function.identity(),Collectors.counting()));
+
+        System.out.println(charOccurrence);
     }
 }
